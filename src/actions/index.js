@@ -10,7 +10,7 @@ export function fetchViews(term) {
     const url = `${ROOT_URL}${cleanTerm}${END_URL}`;
     const request = axios.get(url);
 
-//     console.log('Request:', request);
+    console.log('Request:', request);
 
     return {
         type: FETCH_VIEWS,
