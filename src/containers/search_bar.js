@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchViews } from '../actions/index';
 
 export default class SearchBar extends Component {
     constructor(props) {
@@ -15,6 +18,8 @@ export default class SearchBar extends Component {
 
     onFormSubmit(event) {
         event.preventDefault();
+
+
     }
 
     render() {
