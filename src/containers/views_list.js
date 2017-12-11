@@ -27,8 +27,8 @@ class ViewsList extends Component {
 
 }
 
-function mapStateToProps({ views }) {
-  return { views };
+function mapStateToProps({ views, isLoading }) {
+  return { views, isLoading };
 }
 
 export default connect(mapStateToProps)(ViewsList);
