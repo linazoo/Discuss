@@ -5,10 +5,12 @@ export default class ViewDetail extends Component {
   constructor(props) {
     super(props);
 
-    this.handleCLick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    alert("hey")
+    const url = `${ this.props.url }.json`
+    debugger;
+    this.props.fetchView(url)
   }
 
   render() {

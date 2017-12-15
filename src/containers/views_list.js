@@ -7,12 +7,14 @@ class ViewsList extends Component {
     const viewTitle = viewData.data.title;
     const author = viewData.data.author;
     const id = viewData.data.id;
-
+    const url = viewData.data.url;
+    
     return (
       <ViewDetail
         title={viewTitle}
         author={author}
         key={id}
+        url={url}
       />
     );
   }

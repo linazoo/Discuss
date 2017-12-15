@@ -4,6 +4,7 @@ const ROOT_URL = 'https://www.reddit.com/r/changemyview/search.json?q=';
 const END_URL = "&restrict_sr=on&sort=relevance&t=all";
 
 export const FETCH_VIEWS = 'FETCH_VIEWS';
+export const FETCH_VIEW = 'FETCH_VIEW';
 
 export function fetchViews(term) {
     const cleanTerm = term.split(" ").join("+");
@@ -14,6 +15,15 @@ export function fetchViews(term) {
 
     return {
         type: FETCH_VIEWS,
+        payload: request
+    };
+}
+
+export function fetchView(url) {
+    const request = axios.get(url);
+
+    return {
+        type: FETCH_VIEW,
         payload: request
     };
 }
