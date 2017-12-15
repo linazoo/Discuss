@@ -9,7 +9,6 @@ export default class ViewDetail extends Component {
   }
   handleClick() {
     const url = `${ this.props.url }.json`
-    debugger;
     this.props.fetchView(url)
   }
 
