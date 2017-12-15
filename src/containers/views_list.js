@@ -6,11 +6,13 @@ class ViewsList extends Component {
   renderViews(viewData) {
     const viewTitle = viewData.data.title;
     const author = viewData.data.author;
+    const id = viewData.data.id;
 
     return (
       <ViewDetail
         title={viewTitle}
         author={author}
+        key={id}
       />
     );
   }
