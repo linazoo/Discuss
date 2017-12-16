@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchViews } from '../actions/index';
 
+
 class SearchBar extends Component {
     constructor(props) {
         super(props)
@@ -25,8 +26,11 @@ class SearchBar extends Component {
     }
 
     render() {
+        const style = {
+            'margin': '40px'
+          }
         return (
-            <form onSubmit={this.onFormSubmit} className="input-group">
+            <form onSubmit={this.onFormSubmit} className="input-group" style={style}>
                 <input 
                     placeholder="Search for a topic you'd change your mind about"
                     className="form-control"

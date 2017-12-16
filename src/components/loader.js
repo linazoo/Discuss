@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 
 export default class Loader extends Component {
-    
+    constructor(props) {
+        super(props);
+    }
     componentDidMount() {
         this.createLoader();
     }
@@ -116,9 +118,14 @@ export default class Loader extends Component {
         function easing(t, b, c, d) { if ((t /= d / 2) < 1) return c / 2 * t * t + b; return c / 2 * ((t -= 2) * t * t + 2) + b; }
     }
     render() {
-        return (
-            <div id="wrap"></div>
-            // <canvas ref="canvas" width={300} height={300}/>
-        );
+        debugger;
+        const { isLoading } = this.props;
+        { if (isLoading) {
+            return (
+                <div id="wrap"></div>
+                // <canvas ref="canvas" width={300} height={300}/>
+            );
+
+        }}
     }
 }
