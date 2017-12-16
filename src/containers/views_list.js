@@ -30,7 +30,7 @@ class ViewsList extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="view-list">
           {this.props.views.map(this.renderViews)}
         </ul>
       </div>

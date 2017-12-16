@@ -13,8 +13,15 @@ export default class ViewDetail extends Component {
   }
 
   render() {
+    const cardStyle = {
+      'padding': '30px',
+      'marginBottom': '10px'
+    }
+    
     return (
-      <Card onClick= { this.handleClick } >
+      <Card 
+        onClick={ this.handleClick } 
+        style={cardStyle} >
         <p> {this.props.title} </p>
         <p> author: {this.props.author} </p>
       </Card>
