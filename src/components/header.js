@@ -10,7 +10,7 @@ export default class Header extends Component {
         return (
             <div className="header-container">
                 <div className="row">
-                    <div className="logo-container col-sm-12">
+                    <div className="logo-container col-sm-6 col-sm-offset-3">
                         <Logo />
                     </div>
                 </div>

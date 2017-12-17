@@ -13,7 +13,6 @@ export default class App extends Component {
       <div className="app-container">
         <Header />
         <SearchBar/>
-        <Divider />
         <ViewsList />
       </div>
     );

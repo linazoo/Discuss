@@ -7,8 +7,8 @@ export default class Logo extends Component {
 		return (
 
 
-			<svg version="1.1" x="0px" y="0px" width="432px"
-			height="432px" viewBox="0 0 432 432" enable-background="new 0 0 432 432">
+			<svg version="1.1" x="0px" y="0px" width="100%"
+			height="100%" viewBox="0 0 432 432" enable-background="new 0 0 432 432">
 	 <g id="Layer_1">
 		 <g>
 			 <path d="M84.647,134.337c-1.113,0.405-1.873,1.183-2.278,2.329c-0.406,1.149-0.607,3.005-0.607,5.57v40.105
