@@ -11,8 +11,8 @@ export default class App extends Component {
 
     return (
       <div className="app-container">
-          <SearchBar/>
-          <Divider />
+        <SearchBar/>
+        <Divider />
         <ViewsList />
       </div>
     );
