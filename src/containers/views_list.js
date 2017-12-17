@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchView } from '../actions/index';
 import ViewDetail from '../components/view_detail';
+import ViewShow from '../components/view_show';
 
 class ViewsList extends Component {
   constructor(props){
     super(props);
     this.renderViews = this.renderViews.bind(this);
-    // this.testRequest = this.testRequest.bind(this);
   }
 
   renderViews(viewData) {
@@ -28,6 +28,15 @@ class ViewsList extends Component {
   }
 
   render() {
+    const activeView = this.props.activeView;
+    const activeViewReplies = this.props.activeViewReplies;
+
+    if (activeView) { 
+      return <ViewShow 
+        view={activeView}
+        replies={activeViewReplies}
+      /> 
+    };
     return (
       <div>
         <ul className="view-list">
@@ -39,8 +48,12 @@ class ViewsList extends Component {
 
 }
 
-function mapStateToProps({ views }) {
-  return { views };
+function mapStateToProps(state) {
+  return { 
+    views : state.views,
+    activeView: state.activeView.view,
+    activeViewReplies: state.activeView.replies
+  };
 }
 
 function mapDispatchToProps(dispatch) {

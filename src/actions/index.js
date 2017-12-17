@@ -20,7 +20,6 @@ export function fetchViews(term) {
 }
 
 export function fetchView(url) {
-    debugger;
     const request = axios.get(url);
 
     return {
