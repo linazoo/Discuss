@@ -8,7 +8,6 @@ class ViewsList extends Component {
   constructor(props){
     super(props);
     this.renderViews = this.renderViews.bind(this);
-    // this.testRequest = this.testRequest.bind(this);
   }
 
   renderViews(viewData) {
@@ -28,6 +27,8 @@ class ViewsList extends Component {
   }
 
   render() {
+    const activeView = this.props.activeView;
+    if (activeView) { return <div></div> };
     return (
       <div>
         <ul className="view-list">
@@ -39,8 +40,12 @@ class ViewsList extends Component {
 
 }
 
-function mapStateToProps({ views }) {
-  return { views };
+function mapStateToProps(state) {
+  return { 
+    views : state.views,
+    activeView: state.activeView.activeView,
+    activeViewReplies: state.activeView.activeViewReplies
+  };
 }
 
 function mapDispatchToProps(dispatch) {
