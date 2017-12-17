@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchViews } from '../actions/index';
+import Input from 'material-ui/Input';
+import { withStyles } from 'material-ui/styles';
+import RaisedButton from 'material-ui/Button';
 
 
 class SearchBar extends Component {
@@ -26,20 +29,28 @@ class SearchBar extends Component {
 	}
 
 	render() {
-		const style = {
-			'margin': '40px'
-		}
+		const inputStyles = {
+			'padding': '10px',
+			'marginBottom': '20px'
+		};
 		return (
-			<form onSubmit={this.onFormSubmit} className="input-group" style={style}>
-				<input
-					placeholder="Search for a topic you'd change your mind about"
-					className="form-control"
-					value={this.state.term}
-					onChange={this.onInputChange} />
-				<span className="input-group-btn">
-					<button type="submit" className="btn btn-secondary">Search</button>
-				</span>
-			</form>
+			<div className="form-container row">
+				<form onSubmit={this.onFormSubmit} className="col-md-6 col-md-offset-3">
+					<Input
+						fullWidth="true"
+						placeholder="Search for a topic you'd change your mind about"
+						className=""
+						style={inputStyles}
+						value={this.state.term}
+						onChange={this.onInputChange} 
+						InputLabelProps={{
+							shrink: true,
+						}}/>
+					<span className="button-container col-sm-6 col-sm-offset-3">
+						<RaisedButton type="submit" className="submit-button" color="primary">Search</RaisedButton>
+					</span>
+				</form>
+			</div>
 		);
 	}
 }

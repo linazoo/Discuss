@@ -16,7 +16,6 @@ export default class Header extends Component {
                 </div>
                 <div className="row">
                     <div className="intro-text col-sm-12 col-md-6 col-md-offset-3 centered">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate dui sem, et hendrerit erat euismod non. Cras semper, nisi id hendrerit fermentum</p>
                     </div>
                 </div>
             </div>
