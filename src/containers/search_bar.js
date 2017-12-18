@@ -29,10 +29,18 @@ class SearchBar extends Component {
 	}
 
 	render() {
+		const activeView = this.props.activeView;
+		const views = this.props.views;
+
 		const inputStyles = {
 			'padding': '10px',
 			'marginBottom': '20px'
 		};
+
+		if (activeView || views.length ) { 
+      return <div></div>
+		};
+		
 		return (
 			<div className="form-container row">
 				<form onSubmit={this.onFormSubmit} className="col-md-6 col-md-offset-3">
@@ -55,8 +63,15 @@ class SearchBar extends Component {
 	}
 }
 
+function mapStateToProps(state) {
+  return { 
+    views : state.views,
+    activeView: state.activeView.view
+  };
+}
+
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ fetchViews }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
