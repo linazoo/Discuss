@@ -3,7 +3,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    context: "react-youtube",
+    context: "Discuss",
     path: __dirname + "/static",
     publicPath: '/',
     filename: 'bundle.js'
