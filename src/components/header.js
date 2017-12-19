@@ -7,8 +7,10 @@ export default class Header extends Component {
 	}
 
 	render() {
+    // const classYo = this.props.views.length ? "slideOutUp bye" : "slideInDown";
+    const classYo = this.props.views.length ? "slideOutUp bye" : "slideInDown";
 		return (
-			<div className="header-container animated slideInDown">
+			<div className={"header-container animated " + classYo }>
 				<div className="row">
 					<div className="logo-container col-sm-6 col-sm-offset-3">
 						<Logo />
