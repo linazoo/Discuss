@@ -10,3 +10,7 @@ body {height: 100%; font-family: 'Roboto Slab', serif; background: #60b5ff; -web
 .submit-button {
     width: 100%;
 }
+
+body {
+  background: pink;
+}
