@@ -17,11 +17,7 @@ export default class ViewDetail extends Component {
       'padding': '30px',
       'marginBottom': '10px'
     }
-    const spanStyle = {
-      'display': 'block',
-      'paddingTop': '10px',
-      'fontStyle': 'italic'
-    }
+
     const authorStyle = {
       'textAlign': 'right'
     }
@@ -31,7 +27,8 @@ export default class ViewDetail extends Component {
       <Card 
         onClick={ this.handleClick } 
         style={cardStyle} >
-        <p> {title} <span style={spanStyle}>Change my View</span> </p>
+        <p className="title"> {title} </p>
+        <p className="change"> Change my view </p>
         <p style={authorStyle}>{this.props.author} </p>
       </Card>
     );
