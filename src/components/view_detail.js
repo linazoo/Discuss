@@ -17,13 +17,22 @@ export default class ViewDetail extends Component {
       'padding': '30px',
       'marginBottom': '10px'
     }
+    const spanStyle = {
+      'display': 'block',
+      'paddingTop': '10px',
+      'fontStyle': 'italic'
+    }
+    const authorStyle = {
+      'textAlign': 'right'
+    }
+    const title = this.props.title.replace('CMV: ', '');
     
     return (
       <Card 
         onClick={ this.handleClick } 
         style={cardStyle} >
-        <p> {this.props.title} </p>
-        <p> author: {this.props.author} </p>
+        <p> {title} <span style={spanStyle}>Change my View</span> </p>
+        <p style={authorStyle}>{this.props.author} </p>
       </Card>
     );
   }
