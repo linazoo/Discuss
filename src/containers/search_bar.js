@@ -46,7 +46,7 @@ class SearchBar extends Component {
 				<form onSubmit={this.onFormSubmit} className="col-md-6 col-md-offset-3">
 					<Input
 						fullWidth="true"
-						placeholder="Search for a topic you'd change your mind about"
+						placeholder="Change My View about this..."
 						className=""
 						style={inputStyles}
 						value={this.state.term}
