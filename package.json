@@ -32,6 +32,7 @@
     "flexbox-react": "^4.4.0",
     "lodash": "^3.10.1",
     "material-ui": "^1.0.0-beta.22",
+    "material-ui-icons": "^1.0.0-beta.17",
     "material-ui-search-bar": "^0.4.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
