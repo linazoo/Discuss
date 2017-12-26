@@ -12,7 +12,7 @@ export default class Header extends Component {
 		return (
 			<div className={"header-container animated " + classYo }>
 				<div className="row">
-					<div className="logo-container col-sm-6 col-sm-offset-3">
+					<div className="logo-container ">
 						<Logo />
 					</div>
 				</div>
