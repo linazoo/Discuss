@@ -6,8 +6,11 @@ export default class ViewShow extends Component {
 	}
 
 	renderReplies(replyData) {
+		const myStyle = {
+			'border': '2px solid black'
+		}
 		return (
-			<p>{replyData.data.body}</p>
+			<div className="" style={myStyle}>{replyData.data.body}</div>
 		);
 	}
 
@@ -15,9 +18,8 @@ export default class ViewShow extends Component {
 		const title = this.props.view.title;
 		const replies = this.props.replies;
 		return (
-			<div>
-				All the details here honey
-				<h2>{title}</h2>
+			<div className="">
+	
 				{replies.map(this.renderReplies)}
 				</div>
 		);
