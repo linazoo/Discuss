@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class ViewShow extends Component {
 	constructor(props) {
 		super(props)
@@ -19,8 +20,7 @@ export default class ViewShow extends Component {
 		const replies = this.props.replies;
 		return (
 			<div className="">
-	
-				{replies.map(this.renderReplies)}
+			{replies.map(this.renderReplies)}
 				</div>
 		);
 	}
