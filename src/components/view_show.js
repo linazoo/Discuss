@@ -14,13 +14,24 @@ export default class ViewShow extends Component {
 		);
 	}
 
+	renderAllReplies(replies){
+		let num = 1;
+		const yo = replies.map((reply) => {
+			num = num+1;
+			return (
+				<div className={num % 2 === 0 ? "bubble-arrow-right" : "bubble-arrow-left"}>{reply.data.body}</div>
+			)
+		});
+		return yo	
+	}
+
 	render() {
 		const title = this.props.view.title.replace('CMV: ', '');
 		const replies = this.props.replies;
 		return (
 			<div className="">
 			<h4>{ title }</h4>
-			{replies.map(this.renderReplies)}
+				{ this.renderAllReplies(replies) }
 				</div>
 		);
 	}
