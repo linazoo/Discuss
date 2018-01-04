@@ -24,7 +24,8 @@ export default class ViewDetail extends Component {
     const title = this.props.title.replace('CMV: ', '');
     
     return (
-      <Card 
+      <Card
+        className="card" 
         onClick={ this.handleClick } 
         style={cardStyle} >
         <p className="title"> {title} </p>
