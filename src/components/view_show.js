@@ -8,19 +8,30 @@ export default class ViewShow extends Component {
 
 	renderReplies(replyData) {
 		const myStyle = {
-			'border': '2px solid black'
 		}
 		return (
-			<div className="" style={myStyle}>{replyData.data.body}</div>
+			<div className="bubble-arrow-right" style={myStyle}>{replyData.data.body}</div>
 		);
 	}
 
+	renderAllReplies(replies){
+		let num = 1;
+		const yo = replies.map((reply) => {
+			num = num+1;
+			return (
+				<div className={num % 2 === 0 ? "bubble-arrow-right" : "bubble-arrow-left"}>{reply.data.body}</div>
+			)
+		});
+		return yo	
+	}
+
 	render() {
-		const title = this.props.view.title;
+		const title = this.props.view.title.replace('CMV: ', '');
 		const replies = this.props.replies;
 		return (
 			<div className="">
-			{replies.map(this.renderReplies)}
+			<h4>{ title }</h4>
+				{ this.renderAllReplies(replies) }
 				</div>
 		);
 	}
