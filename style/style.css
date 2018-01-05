@@ -56,9 +56,7 @@ body {
   max-height: 0;
   transition: max-height 500ms 1000ms;
 }
-/* .bye {
-  background-color: black;
-} */
+
 
 .card {
   cursor: pointer;
@@ -146,4 +144,13 @@ body {
       background:#cfe7ff;
       border-bottom-left-radius: 10px;
       -webkit-transform:translate(-30px, -2px);
+  }
+
+  .replies-container {
+    font-size: 12px;
+  }
+
+  .title-container {
+    text-align: center;
+    margin: 10px 10%;
   }

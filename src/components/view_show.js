@@ -18,8 +18,13 @@ export default class ViewShow extends Component {
 		let num = 1;
 		const yo = replies.map((reply) => {
 			num = num+1;
+			const replyText = reply.data.body
+			// this is to get rid of the 'remove' and 'deleted' comments 
+			if(replyText.length < 10) {
+				return;
+			}
 			return (
-				<div className={num % 2 === 0 ? "bubble-arrow-right" : "bubble-arrow-left"}>{reply.data.body.substring(0,300)}</div>
+				<div className={num % 2 === 0 ? "bubble-arrow-right" : "bubble-arrow-left"}>{replyText.substring(0,300)}</div>
 			)
 		});
 		return yo	
@@ -30,7 +35,9 @@ export default class ViewShow extends Component {
 		const replies = this.props.replies;
 		return (
 			<div className="">
-				<h4>{ title }</h4>
+				<div className="title-container">
+					<h4>{ title }</h4>
+				</div>
 				<div className="replies-container">
 					{ this.renderAllReplies(replies) }
 				</div>
