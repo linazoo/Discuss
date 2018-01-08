@@ -21,6 +21,8 @@ body {
 
 .title {
   font-weight: bold;
+  text-align: center;
+  font-style: italic;
 }
 
 @media (min-width: 1025px) { 
@@ -30,8 +32,16 @@ body {
     font-size: 20px;
     margin-top: 50px;
   }
+  .title {
+    font-size: 37px;
+  }
+  .author {
+    font-size: 12px;
+  }
 }
-
+.card {
+  padding: 45px;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .view-list {
     max-width: 90%;
@@ -61,6 +71,12 @@ body {
 .card {
   cursor: pointer;
   background-color: transparent;
+}
+
+.logo-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
 }
 
 .bubble-arrow-left {
