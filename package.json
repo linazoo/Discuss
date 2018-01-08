@@ -11,6 +11,7 @@
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
     "postinstall": "webpack -p",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
@@ -26,6 +27,7 @@
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
+    "express": "^4.13.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
@@ -42,7 +44,6 @@
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
-    "webpack": "^1.12.9",
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3"
   }

@@ -14,7 +14,6 @@ export default class ViewDetail extends Component {
 
   render() {
     const cardStyle = {
-      'padding': '30px',
       'marginBottom': '10px'
     }
 
@@ -29,8 +28,7 @@ export default class ViewDetail extends Component {
         onClick={ this.handleClick } 
         style={cardStyle} >
         <p className="title"> {title} </p>
-        <p className="change"> Change my view </p>
-        <p style={authorStyle}>{this.props.author} </p>
+        <p className="author" style={authorStyle}>{this.props.author} </p>
       </Card>
     );
   }
