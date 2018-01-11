@@ -16,7 +16,7 @@ body {height: 100%; font-family: 'Roboto Slab', serif; background: #60b5ff; -web
 }
 
 body {
-  background: #cfe6ff;
+  background: white;
 }
 
 .title {
@@ -169,4 +169,19 @@ body {
   .title-container {
     text-align: center;
     margin: 10px 10%;
+  }
+
+  .list-container {
+    background-color: #006fb9;
+  }
+
+  .blue-shape {
+    width: 75%;
+    height: 75%;
+    background-color: #e8d0db;
+  }
+
+  .app-container {
+    max-height: 600px;
+    overflow: scroll;
   }
