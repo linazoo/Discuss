@@ -37,14 +37,19 @@ class ViewsList extends Component {
         replies={activeViewReplies}
       /> 
     };
+
+    if (!this.props.views.length) {
+      return null;
+    }
+    
     return (
       <div className="list-container">
         <div className="blue-shape">
         </div>
 
-        <ul className="view-list">
+        {/* <ul className="view-list">
           {this.props.views.map(this.renderViews)}
-        </ul>
+        </ul> */}
       </div>
     );
   }

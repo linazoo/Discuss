@@ -30,7 +30,6 @@ body {
     max-width: 70%;
     margin: 0 auto;
     font-size: 20px;
-    margin-top: 50px;
   }
   .title {
     font-size: 37px;
@@ -47,7 +46,6 @@ body {
     max-width: 90%;
     margin: 0 auto;
     font-size: 15px;
-    margin-top: 50px;
   }
 }
 
@@ -172,16 +170,25 @@ body {
   }
 
   .list-container {
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #e8d0db;
+    overflow: hidden;
+  }
+  
+  .blue-shape {  
     background-color: #006fb9;
   }
 
-  .blue-shape {
-    width: 75%;
-    height: 75%;
-    background-color: #e8d0db;
-  }
-
-  .app-container {
-    max-height: 600px;
-    overflow: scroll;
+  .blue-shape::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    bottom: 0;
+    transform-origin: left top;
+    transform: skewY(-7deg) skewX(-7deg);
   }
