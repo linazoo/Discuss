@@ -192,3 +192,9 @@ body {
     transform-origin: left top;
     transform: skewY(-7deg) skewX(-7deg);
   }
+
+  @media (max-width: 767px) {
+    .blue-shape::after{
+      transform: skewY(-6deg) skewX(-2deg);
+    }
+  }
