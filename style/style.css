@@ -182,6 +182,7 @@ body {
   
   .blue-shape {  
     background-color: #006fb9;
+    
   }
 
   .blue-shape::after{
@@ -193,10 +194,15 @@ body {
     bottom: 0;
     transform-origin: left top;
     transform: skewY(-7deg) skewX(-7deg);
+<<<<<<< HEAD
+    box-shadow: 0.4em 0.4em 1em 0.4em #bca9b1;
+
+=======
   }
 
   @media (max-width: 767px) {
     .blue-shape::after{
       /* transform: skewY(-6deg) skewX(-2deg); */
     }
+>>>>>>> master
   }
