@@ -170,8 +170,10 @@ body {
   }
 
   .list-container {
-    width: 90%;
-    height: 700px;
+    /* width: 90%; */
+    width: 90vw;
+    /* height: 700px; */
+    height:100vh;
     margin: 0 auto;
     position: relative;
     background-color: #e8d0db;
@@ -192,6 +194,15 @@ body {
     bottom: 0;
     transform-origin: left top;
     transform: skewY(-7deg) skewX(-7deg);
+<<<<<<< HEAD
     box-shadow: 0.4em 0.4em 1em 0.4em #bca9b1;
 
+=======
+  }
+
+  @media (max-width: 767px) {
+    .blue-shape::after{
+      /* transform: skewY(-6deg) skewX(-2deg); */
+    }
+>>>>>>> master
   }
