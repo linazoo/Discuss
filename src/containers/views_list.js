@@ -46,8 +46,8 @@ class ViewsList extends Component {
       <div className="list-container">
         <div className="white-border">
         </div>
-          <div className="blue-shape">
-          </div>
+        <div className="blue-shape">
+        </div>
 
           {/* <ul className="view-list">
             {this.props.views.map(this.renderViews)}
