@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { fetchView } from '../actions/index';
 import ViewDetail from '../components/view_detail';
 import ViewShow from '../components/view_show';
+import Logo from '../cmv_logo.js';
+
 
 class ViewsList extends Component {
   constructor(props){
@@ -44,6 +46,10 @@ class ViewsList extends Component {
     
     return (
       <div className="list-container">
+      {/* add onclick to make logo go back to homescreen */}
+        <div className="logo"> 
+          <Logo/>
+        </div>
 
         <div className="decorations">
           <div className="white-border">
