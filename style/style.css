@@ -2,7 +2,7 @@ body {height: 100%; font-family: 'Roboto Slab', serif; background: #60b5ff; -web
 #wrap {position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden;}
 #wrap canvas {position: absolute; left: 50%; top: 50%; width: 500px; height: 500px; margin: -250px 0 0 -250px; -outline: 1px solid #fff;}
 .info {position: absolute; left: 0; right: 0; bottom: 0; font-size: 12px; color: #ccc; line-height: 2em; text-align: center;}
-.view-list {padding-left: 0px; margin-top: 20px; }
+.view-list {padding-left: 0px; margin-top: 20px; position: absolute; z-index: 1}
 .logo-container > svg { display: block; width: 100%}
 .logo-container {
   width: 50%;
@@ -27,7 +27,7 @@ body {
 
 @media (min-width: 1025px) { 
   .view-list {
-    max-width: 70%;
+    max-width: 90%;
     margin: 0 auto;
     font-size: 20px;
   }
@@ -45,14 +45,14 @@ body {
   .view-list {
     max-width: 90%;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 767px) {
   .view-list {
     max-width: 100%;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -212,7 +212,19 @@ body {
     border: 5px solid white;
     transform-origin: left top;
     transform: skewY(-7deg) skewX(-7deg);
-    box-shadow: 0.4em 0.4em 1em 0.4em #bca9b1;
+    /* box-shadow: 0.4em 0.4em 1em 0.4em #bca9b1; */
+  }
+
+  .view-list {
+    transform-origin: left top;
+    transform: skewY(-7deg) skewX(-7deg);
+    height: 100%;
+    margin-top: 0vh;
+    overflow: scroll;
+  }
+
+  .card {
+    transform: skewY(7deg) skewX(7deg);
   }
 /* 
   @media (max-width: 767px) {

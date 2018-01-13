@@ -23,13 +23,13 @@ export default class ViewDetail extends Component {
     const title = this.props.title.replace('CMV: ', '');
     
     return (
-      <Card
+      <div
         className="card" 
         onClick={ this.handleClick } 
         style={cardStyle} >
         <p className="title"> {title} </p>
         <p className="author" style={authorStyle}>{this.props.author} </p>
-      </Card>
+      </div>
     );
   }
 }
