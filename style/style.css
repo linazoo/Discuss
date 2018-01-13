@@ -4,11 +4,10 @@ body {
   background: white;
 }
 
-.logo-container > svg { display: block; width: 100%}
 
 .logo-container {
-  width: 50%;
-  margin: 0 auto;
+  /* width: 50%;
+  margin: 0 auto; */
 }
 .form-container {
   margin-top: 20px;
@@ -39,24 +38,37 @@ body {
 
 .title {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   font-style: italic;
 }
 
 .card {
-  padding: 45px;
+  padding: 45px 50px;
   cursor: pointer;
   background-color: transparent;
-  transform: skewY(7deg) skewX(7deg);  
 }
 
 .header-container {
-  max-height: 330px; 
+  /* max-height: 330px;  */
 }
 
 .header-container.bye {
-  max-height: 0;
-  transition: max-height 500ms 1000ms;
+  /* max-height: 200px;
+  transition: max-height 500ms 1000ms; */
+}
+
+.header-container.bye {}
+
+.logo-container > svg { display: block; width: 100%}
+.logo-container {
+  width: 100%;
+  transition: width 500ms 200ms;
+  
+}
+
+.logo-container.bye {
+  width: 30%;
+  transition: width 500ms 500ms;
 }
 
 .logo-text {
@@ -101,10 +113,9 @@ body {
 
 .view-list {
   transform-origin: left top;
-  transform: skewY(-7deg) skewX(-7deg);
   height: 100%;
-  bottom: 2%;
-  left: 7%;
+  bottom: 19%;
+  left: 27px;
   margin-top: 0vh;
   overflow: scroll;
 }
@@ -112,7 +123,7 @@ body {
 @media (min-width: 1025px) { 
   .view-list {
     max-width: 90%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     font-size: 20px;
     height: 95%;
   }

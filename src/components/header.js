@@ -10,16 +10,10 @@ export default class Header extends Component {
     // const classYo = this.props.views.length ? "slideOutUp bye" : "slideInDown";
     const classYo = this.props.views.length ? "slideOutUp bye" : "slideInDown";
 		return (
-			<div className={"header-container animated " + classYo }>
-				<div className="row">
-					<div className="logo-container ">
+			<div className={"header-container " + classYo }>
+					<div className={"logo-container " + classYo }>
 						<Logo />
 					</div>
-				</div>
-				<div className="row">
-					<div className="intro-text col-sm-12 col-md-6 col-md-offset-3 centered">
-					</div>
-				</div>
 			</div>
 		);
 	}
