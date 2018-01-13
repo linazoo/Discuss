@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchView } from '../actions/index';
+import { fetchView, emptyViews } from '../actions/index';
 import ViewDetail from '../components/view_detail';
 import ViewShow from '../components/view_show';
 import Logo from '../cmv_logo.js';
@@ -29,6 +29,11 @@ class ViewsList extends Component {
     );
   }
 
+  handleClick() {
+    this.props.emptyViews();
+    // empty the list of views so that the search bar comes back
+  }
+
   render() {
     const activeView = this.props.activeView;
     const activeViewReplies = this.props.activeViewReplies;
@@ -45,9 +50,9 @@ class ViewsList extends Component {
     }
     
     return (
-      <div className="list-container">
+      <div className="list-container" >
       {/* add onclick to make logo go back to homescreen */}
-        <div className="logo"> 
+        <div className="logo" onClick={this.handleClick.bind(this)}> 
           <Logo/>
         </div>
 
@@ -80,7 +85,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchView }, dispatch);
+  return bindActionCreators({ fetchView, emptyViews }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewsList);

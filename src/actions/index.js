@@ -5,6 +5,14 @@ const END_URL = "&restrict_sr=on&sort=relevance&t=all";
 
 export const FETCH_VIEWS = 'FETCH_VIEWS';
 export const FETCH_VIEW = 'FETCH_VIEW';
+export const EMPTY_VIEWS = 'EMPTY_VIEWS';
+
+export function emptyViews() {
+  return {
+    type: EMPTY_VIEWS,
+    payload: []
+  }
+}
 
 export function fetchViews(term) {
 	const cleanTerm = term.split(" ").join("+");

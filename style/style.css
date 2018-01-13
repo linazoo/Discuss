@@ -65,7 +65,7 @@ body {
 }
 
 .logo-container.bye {
-  width: 30%;
+  width: 20%;
   display: none;
   transition: width 500ms 500ms;
 }
