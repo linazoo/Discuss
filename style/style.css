@@ -4,6 +4,10 @@ body {
   background: white;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 
 .logo-container {
   /* width: 50%;
@@ -65,7 +69,7 @@ body {
 }
 
 .logo-container.bye {
-  width: 20%;
+  width: 15%;
   display: none;
   transition: width 500ms 500ms;
 }
@@ -85,6 +89,21 @@ body {
   
 }
 
+/* .pink-triangle {
+  background-color: black;
+}
+
+.pink-triangle::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #bf2b2b;
+  z-index: 3;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: skewY(0deg) skewX(-83deg);
+} */
 .blue-shape::after{
   content: '';
   width: 100%;
@@ -120,8 +139,8 @@ body {
   position: absolute; 
   z-index: 1;
   transform-origin: left top;
-  height: 100%;
-  /* bottom: 19%; */
+  height: 86%;
+  bottom: 8%;
   left: 27px;
   margin-top: 0vh;
   overflow: scroll;
@@ -133,7 +152,8 @@ body {
     max-width: 90%;
     /* margin: 0 auto; */
     font-size: 20px;
-    height: 95%;
+    bottom: 15%;
+    /* height: 86%; */
   }
   .title {
     font-size: 37px;
@@ -148,6 +168,7 @@ body {
     max-width: 90%;
     margin: 0 auto;
     font-size: 18px;
+    bottom: 15%;
   }
   .title {
     font-size: 30px;
@@ -161,6 +182,7 @@ body {
   .view-list {
     max-width: 100%;
     font-size: 16px;
+    left: -36px;
   }
   .title {
     font-size: 20px;
@@ -180,7 +202,7 @@ body {
 }
 
 .logo {
-  width: 20%;
+  width: 15%;
   position: absolute;
   left: 10px;
   top: 10px;
