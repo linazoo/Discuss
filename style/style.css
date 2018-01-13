@@ -170,9 +170,11 @@ body {
   }
 
   .list-container {
-    width: 90vw;
-    height:100vh;
+    width: 95vw;
+    height:95vh;
     margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     position: relative;
     background-color: #e8d0db;
     overflow: hidden;
@@ -210,4 +212,15 @@ body {
     border: 5px solid white;
     transform-origin: left top;
     transform: skewY(-7deg) skewX(-7deg);
+    box-shadow: 0.4em 0.4em 1em 0.4em #bca9b1;
   }
+/* 
+  @media (max-width: 767px) {
+    .white-border::after {
+      transform: skewY(-8deg) skewX(-8deg); 
+    }
+
+    .blue-shape::after{ 
+      transform: skewY(-8deg) skewX(-8deg);      
+    }
+  } */
