@@ -47,6 +47,8 @@ export default class ViewShow extends Component {
         </div> */}
         <div className="white">
         </div>
+				<div className="blank">
+				</div>
 			</div>
       
       

@@ -270,20 +270,32 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 
 .discussion-container {
   height: 95vh;
-  width: 95vw;
-  margin: 0 auto;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  /* width: 95vw; */
+  /* margin: 0 auto; */
+  padding: 3vh 2vw;
+  /* margin-top: 2vh; */
+  /* margin-bottom: 2vh; */
   position: relative;
-  background-color: #e8d0db;
+  background-color: #DFAE5A;
   overflow: hidden;
 }
 
 .white {
-  height: 90vh;
-  width: 90vw;
-  background-color: red;
-  margin: 0 auto;
+  /* position: absolute; */
+  height: 97%;
+  /* width: 88vw; */
+  background-color: transparent;
+  /* margin: 0 auto; */
+  border: 5px solid white;
+}
+
+.blank {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: white;
 }
 /* 
   @media (max-width: 767px) {
