@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from '../cmv_logo.js';
 
 
 export default class ViewShow extends Component {
@@ -34,14 +35,39 @@ export default class ViewShow extends Component {
 		const title = this.props.view.title.replace('CMV: ', '');
 		const replies = this.props.replies;
 		return (
-			<div className="">
-				<div className="title-container">
+			<div className="discussion-container">
+        <div className="logo"> 
+          <Logo/>
+        </div>
+				{/* <div className="title-container">
 					<h4>{ title }</h4>
 				</div>
 				<div className="replies-container">
 					{ this.renderAllReplies(replies) }
-				</div>
+        </div> */}
+        <div className="white">
+        </div>
 			</div>
+      
+      
+      // <div className="list-container" >
+      //   <div className="logo" onClick={this.handleClick.bind(this)}> 
+      //     <Logo/>
+      //   </div>
+
+      //   <div className="decorations">
+      //     <div className="white-border">
+      //       <a href="#">
+      //         <span className="bottom"></span>
+      //       </a>
+      //     </div>
+      //     <div className="blue-shape">
+      //       <ul className="view-list">
+      //         {this.props.views.map(this.renderViews)}
+      //       </ul>
+      //     </div>
+      //   </div>
+      // </div>
 		);
 	}
 }
