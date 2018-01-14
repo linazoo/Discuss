@@ -1,7 +1,7 @@
-body {height: 100%; font-family: 'Roboto Slab', serif; background: #60b5ff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 
 body {
   background: white;
+  font-family: 'Roboto Slab', serif;
 }
 
 ::-webkit-scrollbar {
@@ -44,10 +44,22 @@ body {
 .card {
   padding: 45px 50px;
   cursor: pointer;
+  position: relative;
   background-color: transparent;
 }
+
+.card::after {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  border-bottom: 3px solid white;
+  bottom: 0;
+  left: 25%;
+  margin: 0 auto;
+}
 .card:first-child{
-  padding-top: 120px;
+  padding-top: 8%;
 }
 
 .header-container {
@@ -89,21 +101,6 @@ body {
   
 }
 
-/* .pink-triangle {
-  background-color: black;
-}
-
-.pink-triangle::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #bf2b2b;
-  z-index: 3;
-  bottom: 0;
-  transform-origin: bottom right;
-  transform: skewY(0deg) skewX(-83deg);
-} */
 .blue-shape::after{
   content: '';
   width: 100%;
@@ -147,6 +144,41 @@ body {
   padding-left: 0;
 }
 
+/* small-only */
+@media (max-width: 767px) {
+  .view-list {
+    max-width: 100%;
+    font-size: 16px;
+    left: -36px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .author {
+    font-size: 10px;
+  }
+}
+
+/* medium-only */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .view-list {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 18px;
+    bottom: 15%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .author {
+    font-size: 12px;
+  }
+  .card:first-child{
+    padding-top: 11%;
+  }
+}
+
+/* large-up */
 @media (min-width: 1025px) { 
   .view-list {
     max-width: 90%;
@@ -161,34 +193,9 @@ body {
   .author {
     font-size: 12px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .view-list {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 18px;
-    bottom: 15%;
-  }
-  .title {
-    font-size: 30px;
-  }
-  .author {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 767px) {
-  .view-list {
-    max-width: 100%;
-    font-size: 16px;
-    left: -36px;
-  }
-  .title {
-    font-size: 20px;
-  }
-  .author {
-    font-size: 10px;
+  .card:first-child{
+    padding-top: 13%;
   }
 }
 
