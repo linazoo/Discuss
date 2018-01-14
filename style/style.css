@@ -42,7 +42,7 @@ body {
 }
 
 .card {
-  padding: 45px 50px;
+  padding: 45px 18%;
   cursor: pointer;
   position: relative;
   background-color: transparent;
@@ -50,12 +50,12 @@ body {
 
 .card::after {
   content: '';
-  width: 50%;
+  width: 35%;
   height: 100%;
   position: absolute;
   border-bottom: 3px solid white;
   bottom: 0;
-  left: 25%;
+  left: 20%;
   margin: 0 auto;
 }
 .card:first-child{
@@ -144,18 +144,31 @@ body {
   padding-left: 0;
 }
 
+.logo {
+  width: 15%;
+  position: absolute;
+  left: 26px;
+  top: 27px;
+  z-index: 2;
+}
+
 /* small-only */
 @media (max-width: 767px) {
   .view-list {
     max-width: 100%;
     font-size: 16px;
-    left: -36px;
+    left: 0px;
   }
   .title {
     font-size: 20px;
   }
   .author {
     font-size: 10px;
+  }
+
+  .logo {
+    left: 12px;
+    top: 12px;
   }
 }
 
@@ -173,6 +186,9 @@ body {
   .author {
     font-size: 12px;
   }
+  .card {
+    padding: 45px 20%;
+  }
   .card:first-child{
     padding-top: 11%;
   }
@@ -180,6 +196,9 @@ body {
 
 /* large-up */
 @media (min-width: 1025px) { 
+  .card {
+    padding: 45px 20%;
+  }
   .view-list {
     max-width: 90%;
     /* margin: 0 auto; */
@@ -208,13 +227,7 @@ body {
   margin: 10px 10%;
 }
 
-.logo {
-  width: 15%;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  z-index: 2;
-}
+
 
 
 a {
@@ -223,12 +236,13 @@ a {
   position: absolute;
   bottom: 35px;
   right: 35px;
+  z-index: 3;
 }
 
 
 a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:after {
-  border-top: 0.5em solid #e74c3c;
-  border-right: 0.5em solid #e74c3c;
+  border-top: 0.3em solid #e74c3c;
+  border-right: 0.3em solid #e74c3c;
 }
 
 .bottom {
@@ -237,13 +251,14 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   height: 4em;
   background-color: white;
   border-radius: 50%;
+  opacity: .9;
 }
 
 .bottom:after {
   content: '';
 	display: inline-block;
-  margin-top: 20%;
-  margin-left: 30%;
+  margin-top: 22%;
+  margin-left: 28%;
   width: 1.4em;
   height: 1.4em;
   border-top: 0.3em solid #333;
