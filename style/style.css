@@ -159,6 +159,9 @@ body {
     font-size: 16px;
     left: 0px;
   }
+  .card {
+    padding: 0px 20%;
+  }
   .title {
     font-size: 20px;
   }
@@ -187,7 +190,7 @@ body {
     font-size: 12px;
   }
   .card {
-    padding: 45px 20%;
+    padding: 0px 20%;
   }
   .card:first-child{
     padding-top: 11%;
@@ -197,7 +200,7 @@ body {
 /* large-up */
 @media (min-width: 1025px) { 
   .card {
-    padding: 45px 20%;
+    padding: 0px 20%;
   }
   .view-list {
     max-width: 90%;
