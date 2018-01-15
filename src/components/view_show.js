@@ -25,7 +25,9 @@ export default class ViewShow extends Component {
 			}
 			num = num+1;
 			return (
-				<div className={num % 2 === 0 ? "bubble-arrow-right" : "bubble-arrow-left"}>{replyText.substring(0,300)}</div>
+				<div className={num % 2 === 0 ? "bubble-arrow-right reply" : "bubble-arrow-left reply"}>
+					{replyText}
+				</div>
 			)
 		});
 		return yo	
@@ -47,10 +49,15 @@ export default class ViewShow extends Component {
         </div> */}
         <div className="white">
 					<div className="view-detail-container">
+						{/* add the quote svg here*/}
 						<h4 className="view-title">{ title }</h4>
+
 					</div>
         </div>
 				<div className="blank">
+					<div className="view-replies-container">
+						{ this.renderAllReplies(replies) }
+					</div>
 				</div>
 			</div>
       
