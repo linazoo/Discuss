@@ -33,16 +33,18 @@ export default class ViewShow extends Component {
 		let num = 1;
 		const yo = replies.map((reply) => {
 			const replyText = reply.data.body
+			const postAuthor = reply.data.author
 			// this is to get rid of the 'remove' and 'deleted' comments 
 			if(replyText.length < 10) {
 				return;
 			}
-			num = num+1;
 			return (
-				<div className={num % 2 === 0 ? "bubble-arrow-right reply" : "bubble-arrow-left reply"}>
+				<div className="reply">
 					{replyText}
+					<div className="author">
+						{postAuthor}
+					</div>
 				</div>
-
 			)
 		});
 		return yo	

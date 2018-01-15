@@ -365,6 +365,18 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+.author {
+  font-size: 18px;
+  text-align: right;
+  padding: 6%;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.reply {
+  padding: 11% 11% 0 11%;
+}
 /* 
   @media (max-width: 767px) {
     .white-border::after {
