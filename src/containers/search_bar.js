@@ -55,7 +55,7 @@ class SearchBar extends Component {
 							shrink: true,
 						}}/>
 					<span className="button-container col-sm-6 col-sm-offset-3">
-						<RaisedButton type="submit" className="submit-button" color="primary">Search</RaisedButton>
+						<RaisedButton type="submit" className="submit-button" color="primary">Search</RaisedButton>	
 					</span>
 				</form>
 			</div>

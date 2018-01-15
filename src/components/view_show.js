@@ -46,6 +46,9 @@ export default class ViewShow extends Component {
 					{ this.renderAllReplies(replies) }
         </div> */}
         <div className="white">
+					<div className="view-detail-container">
+						<h4 className="view-title">{ title }</h4>
+					</div>
         </div>
 				<div className="blank">
 				</div>

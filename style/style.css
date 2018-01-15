@@ -281,7 +281,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 
 .white {
   /* position: absolute; */
-  height: 97%;
+  height: 92%;
   /* width: 88vw; */
   background-color: transparent;
   /* margin: 0 auto; */
@@ -306,6 +306,19 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   position: relative;
   background-color: #006fb9;
   overflow: hidden;
+}
+
+.view-detail-container {
+  height: 100%;
+  width: 50%;
+  background-color: transparent;
+  overflow: scroll;
+  padding-top: 10%;
+}
+
+.view-title {
+  font-size: 30px;
+  color: white;
 }
 /* 
   @media (max-width: 767px) {
