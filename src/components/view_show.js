@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../cmv_logo.js';
+import Quote from '../quote.js';
+import ClosingQuote from '../closing-quote.js';
 
 
 export default class ViewShow extends Component {
@@ -49,9 +51,13 @@ export default class ViewShow extends Component {
         </div> */}
         <div className="white">
 					<div className="view-detail-container">
+           
+            <Quote />
 						{/* add the quote svg here*/}
-						<h4 className="view-title">{ title }</h4>
-
+            <ClosingQuote />
+            <h4 className="view-title">
+              { title }
+            </h4>
 					</div>
         </div>
 				<div className="blank">

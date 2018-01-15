@@ -1,7 +1,7 @@
 
 body {
   background: white;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Gill Sans', sans-serif, serif;
 }
 
 ::-webkit-scrollbar {
@@ -317,6 +317,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   background-color: transparent;
   overflow: scroll;
   padding-top: 10%;
+  position: relative;
 }
 
 .view-replies-container {
@@ -335,6 +336,24 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   font-size: 30px;
   color: white;
   padding: 0 16%;
+  position: relative;
+}
+
+.open-quote {
+  width: 8%;
+  height: 10%;
+  position: absolute;
+  z-index: 0;
+  left: 45px;
+}
+
+.closing-quote {
+  width: 8%;
+  height: 10%;
+  position: absolute;
+  z-index: 0;
+  right: 45px;
+
 }
 /* 
   @media (max-width: 767px) {

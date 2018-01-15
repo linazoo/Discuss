@@ -6,8 +6,8 @@ export default class Logo extends Component {
 
 		return (
 
-      <svg className="open-quote" version="1.1" id="Layer_1" x="0px" y="0px"
-	 width="100%" height="100%" viewBox="0 0 88 77">
+      <svg className="closing-quote" version="1.1" id="Layer_1" x="0px" y="0px"
+	 width="100%" height="100%" transform="rotate(180)" viewBox="0 0 88 77">
 <g>
 	<path d="M39.692,13.22c-3.903,2.235-7.056,4.159-9.463,5.772c-2.409,1.614-4.856,3.745-7.346,6.391
 		c-2.325,2.482-4.109,5.09-5.354,7.819c-1.245,2.731-2.117,6.247-2.615,10.548h5.977c5.146,0,9.192,1.267,12.14,3.798
