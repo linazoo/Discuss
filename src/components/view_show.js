@@ -30,6 +30,7 @@ export default class ViewShow extends Component {
 				<div className={num % 2 === 0 ? "bubble-arrow-right reply" : "bubble-arrow-left reply"}>
 					{replyText}
 				</div>
+
 			)
 		});
 		return yo	
@@ -37,6 +38,7 @@ export default class ViewShow extends Component {
 
 	render() {
 		const title = this.props.view.title.replace('CMV: ', '');
+		const viewText = this.props.view.selftext;
 		const replies = this.props.replies;
 		return (
 			<div className="discussion-container">
@@ -54,10 +56,13 @@ export default class ViewShow extends Component {
            
             <Quote />
 						{/* add the quote svg here*/}
-            <ClosingQuote />
             <h4 className="view-title">
               { title }
             </h4>
+						<p className="overflow-view">
+							{ viewText }
+						</p>
+            	<ClosingQuote />
 					</div>
         </div>
 				<div className="blank">

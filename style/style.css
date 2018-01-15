@@ -355,6 +355,16 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   right: 45px;
 
 }
+
+.overflow-view {
+  color: white;
+  font-style: italic;
+  position: relative;
+  padding: 9%;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 /* 
   @media (max-width: 767px) {
     .white-border::after {
