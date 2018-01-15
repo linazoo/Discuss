@@ -43,56 +43,33 @@ export default class ViewShow extends Component {
 		const viewText = this.props.view.selftext;
 		const replies = this.props.replies;
 		return (
-			<div className="discussion-container">
-        <div className="logo"> 
-          <Logo/>
-        </div>
-				{/* <div className="title-container">
-					<h4>{ title }</h4>
-				</div>
-				<div className="replies-container">
-					{ this.renderAllReplies(replies) }
-        </div> */}
-        <div className="white">
-					<div className="view-detail-container">
-           
-            <Quote />
-						{/* add the quote svg here*/}
-            <h4 className="view-title">
-              { title }
-            </h4>
-						<p className="overflow-view">
-							{ viewText }
-						</p>
-            	<ClosingQuote />
+			<div>
+				<div className="discussion-container">
+					<div className="logo"> 
+						<Logo/>
 					</div>
-        </div>
-				<div className="blank">
-					<div className="view-replies-container">
-						{ this.renderAllReplies(replies) }
+
+					<div className="white">
+						<div className="view-detail-container">
+						
+							<Quote />
+							{/* add the quote svg here*/}
+							<h4 className="view-title">
+								{ title }
+							</h4>
+							<p className="overflow-view">
+								{ viewText }
+							</p>
+								<ClosingQuote />
+						</div>
+					</div>
+					<div className="blank">
+						<div className="view-replies-container">
+							{ this.renderAllReplies(replies) }
+						</div>
 					</div>
 				</div>
 			</div>
-      
-      
-      // <div className="list-container" >
-      //   <div className="logo" onClick={this.handleClick.bind(this)}> 
-      //     <Logo/>
-      //   </div>
-
-      //   <div className="decorations">
-      //     <div className="white-border">
-      //       <a href="#">
-      //         <span className="bottom"></span>
-      //       </a>
-      //     </div>
-      //     <div className="blue-shape">
-      //       <ul className="view-list">
-      //         {this.props.views.map(this.renderViews)}
-      //       </ul>
-      //     </div>
-      //   </div>
-      // </div>
 		);
 	}
 }
