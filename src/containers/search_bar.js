@@ -33,10 +33,15 @@ class SearchBar extends Component {
 		const views = this.props.views;
 
 		const inputStyles = {
-			'padding': '10px',
-			'marginBottom': '20px'
+			'width': '60%',
+			'backgroundColor': 'white',
+			'marginTop': '20px',
+			'marginLeft': '20%'
 		};
 
+		const daStyle = {
+			'color': 'white'
+		}
 		if (activeView || views.length ) { 
       return <div></div>
 		};
@@ -47,16 +52,14 @@ class SearchBar extends Component {
 					<Input
 						fullWidth="true"
 						placeholder="Change My View about this..."
-						className=""
-						style={inputStyles}
+						className="search-bar"
 						value={this.state.term}
+						style={daStyle}
 						onChange={this.onInputChange} 
 						InputLabelProps={{
 							shrink: true,
 						}}/>
-					<span className="button-container col-sm-6 col-sm-offset-3">
-						<RaisedButton type="submit" className="submit-button" color="primary">Search</RaisedButton>	
-					</span>
+						<RaisedButton type="submit" className="submit-button" color="primary" style={inputStyles}>Search</RaisedButton>	
 				</form>
 			</div>
 		);

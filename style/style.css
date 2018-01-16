@@ -16,10 +16,19 @@ body {
 
 .submit-button {
   width: 100%;
+  background-color: white;
+  margin-top: 20px;
 }
 
+.MuiInput-inkbar-3:after {
+  background-color: #e8d0db !important;
+}
 
-
+/* .search-bar {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50% !important;
+} */
 
 .list-container {
   width: 100%;
@@ -30,6 +39,10 @@ body {
   position: relative;
   background-color: #e8d0db;
   overflow: hidden;
+}
+
+.form-container {
+  padding: 20px 20% 20px 20%;  
 }
 
 .title {
@@ -251,6 +264,10 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   display: inline-block;
   width: 4em;
   height: 4em;
+  bottom: 4%;
+  right: 4%;
+  position: absolute;
+  z-index: 3;
   background-color: white;
   border-radius: 50%;
   opacity: .9;
@@ -420,6 +437,8 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
     padding: 25% 0 0 13%;
   }
 }
+
+
 /* 
   @media (max-width: 767px) {
     .white-border::after {
