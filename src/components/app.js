@@ -12,8 +12,10 @@ class App extends Component {
   }
 
   render() {
+    const home = (!this.props.views.length && !this.props.activeView)
+    const classes = home == true ? "app-container home" : "app-container" ;
     return (
-      <div className="app-container">
+      <div className={classes}>
         <Header views={this.props.views}/>
         <SearchBar/>
         <ViewsList />
