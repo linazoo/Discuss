@@ -31,16 +31,19 @@ export default class ViewShow extends Component {
 
 	renderAllReplies(replies){
 		let num = 1;
+		var converter = new showdown.Converter();
 		const yo = replies.map((reply) => {
-			const replyText = reply.data.body
-			const postAuthor = reply.data.author
+			const replyText = reply.data.body;
+			const postAuthor = reply.data.author;
+			var replyHtml      = converter.makeHtml(replyText);
+			
 			// this is to get rid of the 'remove' and 'deleted' comments 
 			if(replyText.length < 10) {
 				return;
 			}
 			return (
 				<div className="reply">
-					{replyText}
+					<div dangerouslySetInnerHTML={{__html: replyHtml}} />
 					<div className="author">
 						{postAuthor}
 					</div>
@@ -62,16 +65,7 @@ export default class ViewShow extends Component {
 		var s = html;
 		var n = s.indexOf('<hr />');
 		s = s.substring(0, n != -1 ? n : s.length);
-		// debugger;
-    // var ReactDOMServer = require('react-dom/server');
-    // var HtmlToReactParser = require('html-to-react').Parser;
- 
- 
-    // var htmlInput = html;
-    // var htmlToReactParser = new HtmlToReactParser().Parser;
-    // var reactElement = htmlToReactParser.parse(htmlInput);
-    // var reactHtml = ReactDOMServer.renderToStaticMarkup(reactElement);
-    // debugger;
+
 		return (
 			<div className="discussion-container">
         <div className="logo"> 
