@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import Logo from '../cmv_logo.js';
 import Quote from '../quote.js';
 import ClosingQuote from '../closing-quote.js';
+import showdown from 'showdown';
+// import HtmlToReactParser from 'html-to-react';
+// import ReactMarkdown from 'react-markdown';
+// import ReactDOM from 'react-dom';
+// import ReactMarkdown from 'react-markdown';
+// const ReactDOM = require('react-dom')
+// const ReactMarkdown = require('react-markdown')
+// import ReactDOMServer from 'react-dom/server';
+// import HtmlToReactParser from 'html-to-react';
+// var ReactDOMServer = require('react-dom/server');
+// var HtmlToReactParser = require('html-to-react').Parser;
+
 
 
 export default class ViewShow extends Component {
@@ -41,27 +53,43 @@ export default class ViewShow extends Component {
 	render() {
 		const title = this.props.view.title.replace('CMV: ', '');
 		const viewText = this.props.view.selftext;
-		const replies = this.props.replies;
-		return (
-			<div>
-				<div className="discussion-container">
-					<div className="logo"> 
-						<Logo/>
-					</div>
+    const replies = this.props.replies;
+    
+    var converter = new showdown.Converter(),
+    html      = converter.makeHtml(viewText);
 
-					<div className="white">
-						<div className="view-detail-container">
-						
-							<Quote />
-							{/* add the quote svg here*/}
-							<h4 className="view-title">
-								{ title }
-							</h4>
-							<p className="overflow-view">
-								{ viewText }
-							</p>
-								<ClosingQuote />
+    // var ReactDOMServer = require('react-dom/server');
+    // var HtmlToReactParser = require('html-to-react').Parser;
+ 
+ 
+    // var htmlInput = html;
+    // var htmlToReactParser = new HtmlToReactParser().Parser;
+    // var reactElement = htmlToReactParser.parse(htmlInput);
+    // var reactHtml = ReactDOMServer.renderToStaticMarkup(reactElement);
+    // debugger;
+		return (
+			<div className="discussion-container">
+        <div className="logo"> 
+          <Logo/>
+        </div>
+				{/* <div className="title-container">
+					<h4>{ title }</h4>
+				</div>
+				<div className="replies-container">
+					{ this.renderAllReplies(replies) }
+        </div> */}
+        <div className="white">
+					<div className="view-detail-container">
+           
+            <Quote />
+						{/* add the quote svg here*/}
+            <h4 className="view-title">
+              { title }
+            </h4>
+						<div className="overflow-view">
+              <div dangerouslySetInnerHTML={{__html: html}} />
 						</div>
+            	<ClosingQuote />
 					</div>
 					<div className="blank">
 						<div className="view-replies-container">
