@@ -38,13 +38,16 @@ class SearchBar extends Component {
 
 		const inputStyles = {
 			'width': '60%',
-			'backgroundColor': 'white',
+			'backgroundColor': '#368E59',
 			'marginTop': '20px',
-			'marginLeft': '20%'
+			'marginLeft': '20%',
+			'color': 'white',
+			'fontFamily': 'gillsans'
 		};
 		const navStyles = {
 			'width': '19%',
-			'marginLeft': '3%'
+			'color': 'white',
+			'fontFamily': 'gillsans'
 		}
 		const daStyle = {
 			'color': 'white'

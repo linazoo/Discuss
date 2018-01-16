@@ -328,6 +328,9 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   overflow: hidden;
 }
 
+.app-container.home {
+  overflow: scroll
+}
 .view-detail-container {
   height: 82%;
   width: 50%;
@@ -437,8 +440,10 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 }
 
 .nav-buttons {
-  margin-left: 4% !important;
-  margin-right: -4% !important;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
 }
   .hotbutton {
     background-color: #DC885A !important;
