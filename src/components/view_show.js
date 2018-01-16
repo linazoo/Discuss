@@ -53,11 +53,16 @@ export default class ViewShow extends Component {
 	render() {
 		const title = this.props.view.title.replace('CMV: ', '');
 		const viewText = this.props.view.selftext;
-    const replies = this.props.replies;
+		const replies = this.props.replies;
+		
     
     var converter = new showdown.Converter(),
     html      = converter.makeHtml(viewText);
-
+		
+		var s = html;
+		var n = s.indexOf('<hr />');
+		s = s.substring(0, n != -1 ? n : s.length);
+		// debugger;
     // var ReactDOMServer = require('react-dom/server');
     // var HtmlToReactParser = require('html-to-react').Parser;
  
@@ -86,10 +91,16 @@ export default class ViewShow extends Component {
             <h4 className="view-title">
               { title }
             </h4>
+
 						<div className="overflow-view">
-              <div dangerouslySetInnerHTML={{__html: html}} />
+              <div dangerouslySetInnerHTML={{__html: s}} />
+							<ClosingQuote />
 						</div>
-            	<ClosingQuote />
+
+						<div className="small-replies">
+							<h2 className="reply-title"> Replies </h2>
+							{ this.renderAllReplies(replies) }
+						</div>
 					</div>
 					<div className="blank">
 						<div className="view-replies-container">
