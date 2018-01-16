@@ -406,7 +406,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 
   .reply-title {
     text-align: center;
-    padding: 5% 0 0 0;
+    padding: 5% 0 3% 0;
   }
   
   /* apply 0 padding top to only the first reply in small only */
@@ -414,7 +414,10 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
     padding-top: 0px;
   }
   .small-replies > .reply ~ .reply {
-    padding-top: 11%;
+    padding-top: 1%;
+  }
+  .svg {
+    padding: 25% 0 0 13%;
   }
 }
 /* 
