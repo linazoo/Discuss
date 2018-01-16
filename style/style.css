@@ -154,6 +154,7 @@ body {
   margin-top: 0vh;
   overflow: scroll;
   padding-left: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .logo {
