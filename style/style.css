@@ -345,9 +345,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   overflow: scroll;
 }
 
-.reply-container {
 
-}
 
 .view-title {
   font-size: 23px;
@@ -438,6 +436,22 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   }
 }
 
+.nav-buttons {
+  margin-left: 4% !important;
+  margin-right: -4% !important;
+}
+  .hotbutton {
+    background-color: #DC885A !important;
+  }
+  .topbutton {
+    background-color: #C06C98 !important;
+  }
+  .newbutton {
+    background-color: #D31C34 !important;
+  }
+  .randbutton {
+    background-color: #DFAE5A !important;
+  }
 
 /* 
   @media (max-width: 767px) {
