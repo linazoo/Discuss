@@ -235,7 +235,6 @@ body {
 a {
   display: inline-block;
   border-radius: 50%;
-  position: absolute;
   bottom: 35px;
   right: 35px;
   z-index: 3;
@@ -333,7 +332,8 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 }
 
 .view-title {
-  font-size: 30px;
+  font-size: 23px;
+  font-style: italic;
   color: white;
   padding: 0 16%;
   position: relative;
@@ -358,7 +358,6 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 
 .overflow-view {
   color: white;
-  font-style: italic;
   position: relative;
   padding: 9%;
   padding-top: 0;
@@ -376,6 +375,32 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 
 .reply {
   padding: 11% 11% 0 11%;
+}
+
+
+/* .discussion-container {
+  display: none;
+}
+
+.small-discussion-container {
+  display: block;
+} */
+
+@media (max-width: 768px) {
+  .blank {
+    width: 100%;
+    top:50%;
+    
+  }
+
+  /* .discussion-container {
+    display: block;
+  }
+
+  .small-discussion-container {
+    display: block;
+  } */
+  
 }
 /* 
   @media (max-width: 767px) {

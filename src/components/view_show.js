@@ -91,33 +91,13 @@ export default class ViewShow extends Component {
 						</div>
             	<ClosingQuote />
 					</div>
-        </div>
-				<div className="blank">
-					<div className="view-replies-container">
-						{ this.renderAllReplies(replies) }
+					<div className="blank">
+						<div className="view-replies-container">
+							{ this.renderAllReplies(replies) }
+						</div>
 					</div>
 				</div>
 			</div>
-      
-      
-      // <div className="list-container" >
-      //   <div className="logo" onClick={this.handleClick.bind(this)}> 
-      //     <Logo/>
-      //   </div>
-
-      //   <div className="decorations">
-      //     <div className="white-border">
-      //       <a href="#">
-      //         <span className="bottom"></span>
-      //       </a>
-      //     </div>
-      //     <div className="blue-shape">
-      //       <ul className="view-list">
-      //         {this.props.views.map(this.renderViews)}
-      //       </ul>
-      //     </div>
-      //   </div>
-      // </div>
 		);
 	}
 }
