@@ -78,10 +78,10 @@ class SearchBar extends Component {
 					<RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navStyles}>top</RaisedButton>
 					<RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navStyles}>new</RaisedButton>
 					<RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navStyles}>rand</RaisedButton>
-					
-					
 				</div>	
-				
+				<div>
+					<h1>What is CMV?</h1>
+				</div>
 			</div>
 		);
 	}
