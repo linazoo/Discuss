@@ -444,7 +444,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 200px;
+  margin-bottom: 15%;
 }
   .hotbutton {
     background-color: #DC885A !important;
@@ -459,6 +459,20 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
     background-color: #DFAE5A !important;
   }
 
+
+  .cmw-explained {
+    text-align: justify;
+    margin: 11%;
+    color: white;
+  }
+
+  .main-quote {
+    margin: 14%;
+    font-size: 23px;
+    font-style: italic;
+    color: white;
+    text-align: center;
+  }
 /* 
   @media (max-width: 767px) {
     .white-border::after {
