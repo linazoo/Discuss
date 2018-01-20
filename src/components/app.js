@@ -6,17 +6,21 @@ import Loader from './loader';
 import Divider from 'material-ui/Divider';
 import Header from './header';
 
+/**
+ * Component representing overall App
+ */
 class App extends Component {
   constructor(props){
     super(props);
   }
 
   render() {
-    const home = (!this.props.views.length && !this.props.activeView)
-    const classes = home == true ? "app-container home" : "app-container" ;
+    const isHome = (!this.props.views.length && !this.props.activeView)
+    const appClasses = isHome ? "app-container home" : "app-container" ;
+
     return (
-      <div className={classes}>
-        <Header views={this.props.views} activeView={this.props.activeView} />
+      <div className={appClasses}>
+        <Header views={this.props.views} />
         <SearchBar/>
         <ViewsList />
       </div>

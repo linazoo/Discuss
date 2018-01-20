@@ -36,7 +36,11 @@ class SearchBar extends Component {
 		const activeView = this.props.activeView;
 		const views = this.props.views;
 
-		const inputStyles = {
+		if (activeView || views.length ) { 
+      return null;
+		};
+
+		const searchButtonStyles = {
 			'width': '60%',
 			'backgroundColor': '#368E59',
 			'marginTop': '20px',
@@ -44,40 +48,36 @@ class SearchBar extends Component {
 			'color': 'white',
 			'fontFamily': 'gillsans'
 		};
-		const navStyles = {
+		const navButtonStyles = {
 			'width': '19%',
 			'color': 'white',
 			'fontFamily': 'gillsans'
 		}
-		const daStyle = {
+		const inputStyles = {
 			'color': 'white'
 		}
-		if (activeView || views.length ) { 
-      return <div></div>
-		};
 		
 		return (
 			<div>
-				<div className="form-container row">
-					<form onSubmit={this.onFormSubmit} className="col-md-6 col-md-offset-3">
+				<div className="form-container">
+					<form onSubmit={this.onFormSubmit}>
 						<Input
-							fullWidth="true"
 							placeholder="Change My View about this..."
 							className="search-bar"
 							value={this.state.term}
-							style={daStyle}
+							style={inputStyles}
 							onChange={this.onInputChange} 
 							InputLabelProps={{
 								shrink: true,
 							}}/>
-							<RaisedButton type="submit" className="submit-button" color="primary" style={inputStyles}>Search</RaisedButton>	
+							<RaisedButton type="submit" className="submit-button" color="primary" style={searchButtonStyles}>Search</RaisedButton>	
 					</form>
 				</div>
 				<div className="nav-buttons">
-					<RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" style={navStyles}>hot</RaisedButton>
-					<RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navStyles}>top</RaisedButton>
-					<RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navStyles}>new</RaisedButton>
-					<RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navStyles}>rand</RaisedButton>
+					<RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>hot</RaisedButton>
+					<RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>top</RaisedButton>
+					<RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>new</RaisedButton>
+					<RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>rand</RaisedButton>
 				</div>	
 				<div className="main-quote">
 					<h2>"In order to resolve our differences we must first understand them"</h2>

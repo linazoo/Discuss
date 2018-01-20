@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../cmv_logo.js';
 
+/** represents the header component */
 const Header = (props) => {
   const styleClass = props.views.length ? "small" : "";
 	return (
