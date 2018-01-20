@@ -7,12 +7,13 @@ export default class Header extends Component {
 	}
 
 	render() {
-		if (this.props.views.length) { return null };
+    // const classYo = this.props.views.length ? "slideOutUp bye" : "slideInDown";
+		const classYo = this.props.views.length ? "small" : "";
 		return (
 			<div className="header-container">
-					<div className="logo-container">
-						<Logo />
-					</div>
+				<div className={"logo-container " + classYo}>
+					<Logo />
+				</div>
 			</div>
 		);
 	}
