@@ -5,8 +5,6 @@ import ClosingQuote from '../closing-quote.js';
 import showdown from 'showdown';
 
 
-
-
 export default class ViewShow extends Component {
 	constructor(props) {
 		super(props)
@@ -28,7 +26,6 @@ export default class ViewShow extends Component {
 			return (
 				<div className="reply">
 					{ this.renderParsedMarkdown(replyText) }
-					{/* <div dangerouslySetInnerHTML={{__html: replyHtml}} /> */}
 					<div className="author">
 						{postAuthor}
 					</div>
