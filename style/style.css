@@ -326,7 +326,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 .blank {
   position: absolute;
   width: 50%;
-  height: 95vh;
+  height: 99vh;
   top: 0;
   right: 0;
   background-color: white;
