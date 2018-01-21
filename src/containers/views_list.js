@@ -51,9 +51,9 @@ class ViewsList extends Component {
     
     return (
       <div className="list-container" >
-        <div className="logo" onClick={this.handleClick.bind(this)}> 
+        {/* <div className="logo" onClick={this.handleClick.bind(this)}> 
           <Logo/>
-        </div>
+        </div> */}
 
         <div className="decorations">
           <div className="white-border">

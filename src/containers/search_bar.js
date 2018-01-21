@@ -15,7 +15,6 @@ class SearchBar extends Component {
 
 		this.onInputChange = this.onInputChange.bind(this);
 		this.onFormSubmit = this.onFormSubmit.bind(this);
-		this.handleClick = this.handleClick.bind(this);
 	}
 
 	onInputChange(event) {
@@ -28,67 +27,42 @@ class SearchBar extends Component {
 		this.setState({ term: '' });
 
 	}
-	
-	handleClick(event) {
-		alert("hey");
-	}
+
 	render() {
 		const activeView = this.props.activeView;
 		const views = this.props.views;
 
-		const inputStyles = {
+		if (activeView || views.length ) { 
+      return null;
+		};
+
+		const searchButtonStyles = {
 			'width': '60%',
 			'backgroundColor': '#368E59',
-			'marginTop': '20px',
-			'marginLeft': '20%',
+			'margin': '20px auto',
+			'display': 'block',
 			'color': 'white',
 			'fontFamily': 'gillsans'
 		};
-		const navStyles = {
-			'width': '19%',
-			'color': 'white',
-			'fontFamily': 'gillsans'
-		}
-		const daStyle = {
+
+		const inputStyles = {
 			'color': 'white'
 		}
-		if (activeView || views.length ) { 
-      return <div></div>
-		};
 		
 		return (
 			<div>
-				<div className="form-container row">
-					<form onSubmit={this.onFormSubmit} className="col-md-6 col-md-offset-3">
+				<div className="form-container">
+					<form onSubmit={this.onFormSubmit}>
 						<Input
-							fullWidth="true"
 							placeholder="Change My View about this..."
 							className="search-bar"
+							fullWidth="true"
 							value={this.state.term}
-							style={daStyle}
+							style={inputStyles}
 							onChange={this.onInputChange} 
-							InputLabelProps={{
-								shrink: true,
-							}}/>
-							<RaisedButton type="submit" className="submit-button" color="primary" style={inputStyles}>Search</RaisedButton>	
+	/>
+							<RaisedButton type="submit" className="submit-button" color="primary" style={searchButtonStyles}>Search</RaisedButton>	
 					</form>
-				</div>
-				<div className="nav-buttons">
-					<RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" style={navStyles}>hot</RaisedButton>
-					<RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navStyles}>top</RaisedButton>
-					<RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navStyles}>new</RaisedButton>
-					<RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navStyles}>rand</RaisedButton>
-				</div>	
-				<div className="main-quote">
-					<h2>"In order to resolve our differences we must first understand them"</h2>
-				</div>
-				<div className="cmw-explained">
-					<p>What is /r/changemyview?
-CMV is a subreddit dedicated to the civil discourse of opinions, and is built around the idea that in order to resolve our differences, we must first understand them. We believe that productive conversation requires respect and openness, and that certitude is the enemy of understanding.
-
-That's why CMV is the perfect place to post an opinion you're open to changing. We're not looking to host aggressive debates, or encourage judgement, but help each other understand different perspectives.
-
-changemyview.net</p>
 				</div>
 			</div>
 		);
