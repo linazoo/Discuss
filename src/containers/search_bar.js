@@ -15,7 +15,6 @@ class SearchBar extends Component {
 
 		this.onInputChange = this.onInputChange.bind(this);
 		this.onFormSubmit = this.onFormSubmit.bind(this);
-		this.handleClick = this.handleClick.bind(this);
 	}
 
 	onInputChange(event) {
@@ -28,10 +27,7 @@ class SearchBar extends Component {
 		this.setState({ term: '' });
 
 	}
-	
-	handleClick(event) {
-		alert("hey");
-	}
+
 	render() {
 		const activeView = this.props.activeView;
 		const views = this.props.views;
@@ -43,16 +39,12 @@ class SearchBar extends Component {
 		const searchButtonStyles = {
 			'width': '60%',
 			'backgroundColor': '#368E59',
-			'marginTop': '20px',
-			'marginLeft': '20%',
+			'margin': '20px auto',
+			'display': 'block',
 			'color': 'white',
 			'fontFamily': 'gillsans'
 		};
-		const navButtonStyles = {
-			'width': '19%',
-			'color': 'white',
-			'fontFamily': 'gillsans'
-		}
+
 		const inputStyles = {
 			'color': 'white'
 		}
@@ -64,21 +56,14 @@ class SearchBar extends Component {
 						<Input
 							placeholder="Change My View about this..."
 							className="search-bar"
+							fullWidth="true"
 							value={this.state.term}
 							style={inputStyles}
 							onChange={this.onInputChange} 
-							InputLabelProps={{
-								shrink: true,
-							}}/>
+	/>
 							<RaisedButton type="submit" className="submit-button" color="primary" style={searchButtonStyles}>Search</RaisedButton>	
 					</form>
 				</div>
-				<div className="nav-buttons">
-					<RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>hot</RaisedButton>
-					<RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>top</RaisedButton>
-					<RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>new</RaisedButton>
-					<RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>rand</RaisedButton>
-				</div>	
 				<div className="main-quote">
 					<h2>"In order to resolve our differences we must first understand them"</h2>
 				</div>

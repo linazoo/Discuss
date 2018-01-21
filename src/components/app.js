@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchBar from '../containers/search_bar';
+import NavButtons from '../containers/nav_buttons';
 import ViewsList from '../containers/views_list';
 import Loader from './loader';
 import Divider from 'material-ui/Divider';
@@ -22,6 +23,7 @@ class App extends Component {
       <div className={appClasses}>
         <Header views={this.props.views} />
         <SearchBar/>
+        <NavButtons views={this.props.views}/>
         <ViewsList />
       </div>
     );

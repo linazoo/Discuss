@@ -4,6 +4,10 @@ body {
   font-family: 'Gill Sans', sans-serif, serif;
 }
 
+form {
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
