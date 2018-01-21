@@ -16,11 +16,9 @@ export default class ViewShow extends Component {
 		const allReplies = replies.map((reply) => {
 			const replyText = reply.data.body;
 			const postAuthor = reply.data.author;
-			// const replyHtml      = converter.makeHtml(replyText);
-			
-			// this is to get rid of the 'remove' and 'deleted' comments 
-			if(replyText.length < 10) {
-				return;
+
+			if(replyText && replyText.length < 10) {
+				return null;
 			}
 
 			return (

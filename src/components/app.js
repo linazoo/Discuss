@@ -21,7 +21,7 @@ class App extends Component {
 
     return (
       <div className={appClasses}>
-        <Header views={this.props.views} />
+        <Header views={this.props.views} activeView={this.props.activeView}/>
         <SearchBar/>
         <NavButtons views={this.props.views}/>
         <ViewsList />

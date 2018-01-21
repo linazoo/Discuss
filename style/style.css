@@ -353,6 +353,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   overflow: scroll;
   padding-top: 10%;
   position: relative;
+  -webkit-overflow-scrolling: touch;  
 }
 
 .view-replies-container {
@@ -361,6 +362,8 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   width: 100%;
   background-color: #e8d0db;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;  
+  
 }
 
 

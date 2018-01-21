@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchView, emptyViews } from '../actions/index';
+import { fetchView } from '../actions/index';
 import ViewDetail from '../components/view_detail';
 import ViewShow from '../components/view_show';
 import Logo from '../cmv_logo.js';
 
-
+/**
+ * container component representing the list of views on the "list" page
+ */
 class ViewsList extends Component {
   constructor(props){
     super(props);
+
     this.renderViews = this.renderViews.bind(this);
   }
 
+  /**
+   * Take the information about a particular view and returns a ViewDetail component with information passed as prosp
+   * @param { Object } viewData 
+   */
   renderViews(viewData) {
-    const viewTitle = viewData.data.title;
-    const author = viewData.data.author;
-    const id = viewData.data.id;
-    const url = viewData.data.url;
+    const viewTitle = viewData.data.title,
+      author = viewData.data.author,
+      id = viewData.data.id,
+      url = viewData.data.url;
+
     return (
       <ViewDetail
         title={viewTitle}
@@ -27,11 +35,6 @@ class ViewsList extends Component {
         fetchView={this.props.fetchView}
       />
     );
-  }
-
-  handleClick() {
-    this.props.emptyViews();
-    // empty the list of views so that the search bar comes back
   }
 
   render() {
@@ -82,7 +85,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchView, emptyViews }, dispatch);
+  return bindActionCreators({ fetchView }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewsList);

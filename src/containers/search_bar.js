@@ -94,7 +94,7 @@ function mapStateToProps(state) {
 
 /**
  * allows component to access action creators in props
- * @param { Object } dispatch 
+ * @param { Function } dispatch 
  */
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ fetchViews }, dispatch);

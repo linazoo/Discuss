@@ -9,6 +9,7 @@ const END_URL = "&restrict_sr=on&sort=relevance&t=all";
 export const FETCH_VIEWS = 'FETCH_VIEWS';
 export const FETCH_VIEW = 'FETCH_VIEW';
 export const EMPTY_VIEWS = 'EMPTY_VIEWS';
+export const REMOVE_ACTIVE_VIEW = 'REMOVE_ACTIVE_VIEW';
 
 /**
  * empty array of views in state
@@ -22,11 +23,21 @@ export function emptyViews() {
 }
 
 /**
+ * 
+ */
+export function removeActiveView() {
+	return {
+		type: REMOVE_ACTIVE_VIEW,
+		payload: ''
+	}
+}
+
+/**
  * returns action with pending promise holding views of a particular category
  * @param { String } category category originating from data-attribute on Buttons
  */
 export function fetchViewsByCategory(category) {
-	const url =`${CATEGORY_URL}${category}/.json`;
+	const url =`${CATEGORY_ROOT_URL}${category}/.json`;
 	const request = axios.get(url);
 
 	return {
