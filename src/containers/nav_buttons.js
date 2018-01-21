@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchViews } from '../actions/index';
+import { fetchViewsByCategory } from '../actions/index';
 import RaisedButton from 'material-ui/Button';
 import About from '../components/about';
 
@@ -13,7 +13,8 @@ class NavButtons extends Component {
   }
 
   handleClick(event) {
-		alert("hey");
+		const category = event.target.closest('button').dataset.category;
+    this.props.fetchViewsByCategory(category);
 	}
 
   render(){
@@ -28,10 +29,9 @@ class NavButtons extends Component {
     return (
       <div>
         <div className="nav-buttons">
-          <RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>hot</RaisedButton>
-          <RaisedButton className="topbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>top</RaisedButton>
-          <RaisedButton className="newbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>new</RaisedButton>
-          <RaisedButton className="randbutton" onClick={this.handleClick} color="primary" style={navButtonStyles}>rand</RaisedButton>
+          <RaisedButton className="hotbutton" onClick={this.handleClick} color="primary" data-category="hot" style={navButtonStyles}>hot</RaisedButton>
+          <RaisedButton className="topbutton" onClick={this.handleClick} color="primary" data-category="top" style={navButtonStyles}>top</RaisedButton>
+          <RaisedButton className="newbutton" onClick={this.handleClick} color="primary" data-category="new" style={navButtonStyles}>new</RaisedButton>
         </div>	
         <About />
       </div>
@@ -41,7 +41,7 @@ class NavButtons extends Component {
 
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ fetchViews }, dispatch);
+	return bindActionCreators({ fetchViewsByCategory }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(NavButtons);
