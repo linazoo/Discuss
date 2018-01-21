@@ -1,15 +1,19 @@
 import axios from 'axios';
 
+// define Constants
 const ROOT_URL = 'https://www.reddit.com/r/changemyview/search.json?q=';
-// new root url for the new/hot/etc 
-const CATEGORY_URL = 'https://www.reddit.com/r/changemyview/';
-// becuase its a difernt url than the one above
+const CATEGORY_ROOT_URL = 'https://www.reddit.com/r/changemyview/';
 const END_URL = "&restrict_sr=on&sort=relevance&t=all";
 
+// export action types
 export const FETCH_VIEWS = 'FETCH_VIEWS';
 export const FETCH_VIEW = 'FETCH_VIEW';
 export const EMPTY_VIEWS = 'EMPTY_VIEWS';
 
+/**
+ * empty array of views in state
+ * returns empty array 
+ */
 export function emptyViews() {
   return {
     type: EMPTY_VIEWS,
@@ -17,7 +21,10 @@ export function emptyViews() {
   }
 }
 
-// make action creator for fetchViewsByCateogry
+/**
+ * returns action with pending promise holding views of a particular category
+ * @param { String } category category originating from data-attribute on Buttons
+ */
 export function fetchViewsByCategory(category) {
 	const url =`${CATEGORY_URL}${category}/.json`;
 	const request = axios.get(url);
@@ -28,6 +35,11 @@ export function fetchViewsByCategory(category) {
 	};
 }
 
+/**
+ * returns action with pending promise holding views
+ * takes search term from SearchBar and forms URL to make GET request
+ * @param { String } term 
+ */
 export function fetchViews(term) {
 	const cleanTerm = term.split(" ").join("+");
 	const url = `${ROOT_URL}${cleanTerm}${END_URL}`;
@@ -39,6 +51,10 @@ export function fetchViews(term) {
 	};
 }
 
+/**
+ * returns action with pending promise holding a particular view with its replies
+ * @param { String } url 
+ */
 export function fetchView(url) {
 	const request = axios.get(url);
 
