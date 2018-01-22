@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import Logo from '../cmv_logo.js';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { emptyViews, removeActiveView } from '../actions/index';
 
 /** represents the header component */
-class Header extends Component {
+export default class Header extends Component {
 	constructor(props) {
 		super(props)
 
 		this.handleClick = this.handleClick.bind(this);
 	}
 
+	/**
+	 * Triggers action creator
+	 */
 	handleClick() {
 		if (this.props.views.length && !this.props.activeView) {
 			this.props.emptyViews();
@@ -21,7 +22,6 @@ class Header extends Component {
 		}
 	}
 
-	
 	render() {
 		const styleClass = this.props.views.length ? "small" : "";
 		return (
@@ -33,9 +33,3 @@ class Header extends Component {
 		);
 	}
 }
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ emptyViews, removeActiveView }, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(Header);

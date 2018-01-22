@@ -12,19 +12,22 @@ export default class ViewDiscussion extends Component {
 		super(props)
 	}
 
-
+	/**
+	 * Returns an array of reply components
+	 * @param { Array } replies 
+	 */
 	renderAllReplies(replies){
-		// const converter = new showdown.Converter();
 		const allReplies = replies.map((reply) => {
-			const replyText = reply.data.body;
-			const postAuthor = reply.data.author;
-
+			const replyText = reply.data.body,
+				postAuthor = reply.data.author;
+			// removes replies that have been removed - text too short
 			if(replyText && replyText.length < 10) {
 				return null;
 			}
 
 			return (
 				<div className="reply">
+					{/* reply text comes as markdown - must parse */}
 					{ this.renderParsedMarkdown(replyText) }
 					<div className="author">
 						{postAuthor}
@@ -35,12 +38,15 @@ export default class ViewDiscussion extends Component {
 		return allReplies;
 	}
 
+	/**
+	 * Takes Markown string and returns formatted HTML
+	 * @param { String } viewText 
+	 */
 	renderParsedMarkdown(viewText) {
 		const converter = new showdown.Converter();
     let html = converter.makeHtml(viewText);
-		
 		// remove line breaks coming from response
-		var n = html.indexOf('<hr />');
+		let n = html.indexOf('<hr />');
 		html = html.substring(0, n != -1 ? n : html.length);
 
 		return (
@@ -50,28 +56,24 @@ export default class ViewDiscussion extends Component {
 	}
 
 	render() {
-
 		if (!this.props.activeView) {return null };
 
-		const title = this.props.activeView.title.replace('CMV: ', '');
-		const viewText = this.props.activeView.selftext;
-		const replies = this.props.replies;
+		const title = this.props.activeView.title.replace('CMV: ', ''),
+			viewText = this.props.activeView.selftext,
+			replies = this.props.replies;
 		
 		return (
 			<div className="discussion-container">
         <div className="white">
-					<div className="view-detail-container">
-           
+					<div className="view-detail-container">         
             <Quote />
             <h4 className="view-title">
               { title }
             </h4>
-
 						<div className="overflow-view">
 							{ this.renderParsedMarkdown(viewText) }
 							<ClosingQuote />
 						</div>
-
 						<div className="small-replies">
 							<h2 className="reply-title"> Replies </h2>
 							{ this.renderAllReplies(replies) }

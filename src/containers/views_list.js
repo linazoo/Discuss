@@ -63,6 +63,10 @@ class ViewsList extends Component {
   }
 }
 
+/**
+ * Maps state to components props
+ * @param { Object } state 
+ */
 function mapStateToProps(state) {
   return { 
     views : state.views,
@@ -71,6 +75,10 @@ function mapStateToProps(state) {
   };
 }
 
+/**
+ * attaches action creators to component's props
+ * @param { Function } dispatch 
+ */
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchView }, dispatch);
 }
