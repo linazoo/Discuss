@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchView } from '../actions/index';
 import ViewDetail from '../components/view_detail';
-import ViewShow from '../components/view_show';
 import Logo from '../cmv_logo.js';
 
 /**
@@ -41,23 +40,12 @@ class ViewsList extends Component {
     const activeView = this.props.activeView;
     const activeViewReplies = this.props.activeViewReplies;
 
-    if (activeView) { 
-      return <ViewShow 
-        view={activeView}
-        replies={activeViewReplies}
-      /> 
-    };
-
-    if (!this.props.views.length) {
+    if (!this.props.views.length || this.props.activeView) {
       return null;
     }
     
     return (
       <div className="list-container" >
-        {/* <div className="logo" onClick={this.handleClick.bind(this)}> 
-          <Logo/>
-        </div> */}
-
         <div className="decorations">
           <div className="white-border">
             <a href="#">
@@ -73,9 +61,12 @@ class ViewsList extends Component {
       </div>
     );
   }
-
 }
 
+/**
+ * Maps state to components props
+ * @param { Object } state 
+ */
 function mapStateToProps(state) {
   return { 
     views : state.views,
@@ -84,6 +75,10 @@ function mapStateToProps(state) {
   };
 }
 
+/**
+ * attaches action creators to component's props
+ * @param { Function } dispatch 
+ */
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchView }, dispatch);
 }
