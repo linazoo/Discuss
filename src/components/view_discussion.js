@@ -4,8 +4,10 @@ import Quote from '../quote.js';
 import ClosingQuote from '../closing-quote.js';
 import showdown from 'showdown';
 
-
-export default class ViewShow extends Component {
+/**
+ * component representing ViewDiscussion
+ */
+export default class ViewDiscussion extends Component {
 	constructor(props) {
 		super(props)
 	}
@@ -48,11 +50,13 @@ export default class ViewShow extends Component {
 	}
 
 	render() {
-		const title = this.props.view.title.replace('CMV: ', '');
-		const viewText = this.props.view.selftext;
+
+		if (!this.props.activeView) {return null };
+
+		const title = this.props.activeView.title.replace('CMV: ', '');
+		const viewText = this.props.activeView.selftext;
 		const replies = this.props.replies;
 		
-
 		return (
 			<div className="discussion-container">
         <div className="white">

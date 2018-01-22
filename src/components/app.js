@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import SearchBar from '../containers/search_bar';
 import NavButtons from '../containers/nav_buttons';
 import ViewsList from '../containers/views_list';
+import ViewDiscussion from '../components/view_discussion';
 import Loader from './loader';
 import Divider from 'material-ui/Divider';
 import Header from './header';
@@ -25,6 +26,7 @@ class App extends Component {
         <SearchBar/>
         <NavButtons views={this.props.views}/>
         <ViewsList />
+        <ViewDiscussion activeView={this.props.activeView} replies={this.props.activeViewReplies}/>
       </div>
     );
   }
@@ -33,7 +35,8 @@ class App extends Component {
 function mapStateToProps(state) {
   return { 
     views : state.views,
-    activeView: state.activeView.view
+    activeView: state.activeView.view,
+    activeViewReplies: state.activeView.replies
   };
 }
 
